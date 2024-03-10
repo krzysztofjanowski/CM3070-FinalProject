@@ -1,0 +1,170 @@
+.header {
+  background: url(../images/peter-gargiulo-cGNCepznaV8-unsplash.jpg) no-repeat;
+  background-size: cover;
+}
+
+.add-opactity {
+  opacity: 0.85;
+}
+
+.topNavigationBar {
+  transition: all 0.6s ease-in-out;
+}
+
+.modal-dialog {
+  max-width: 660px;
+  max-height: 940px;
+}
+
+.unique_features img {
+  max-width: 50%;
+}
+
+.carousel-section {
+  max-width: 70%;
+  max-height: 30%;
+  margin: auto auto;
+}
+
+// Play button that radiates
+// this gives us the background circle on the video image
+.play-btn:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border-radius: 48%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  background: var(--bs-primary);
+  height: 50px;
+  cursor: pointer;
+}
+
+.play-btn {
+  position: absolute;
+  z-index: 8;
+  display: block;
+  border-radius: 48%;
+  box-sizing: content-box;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 1rem 1.125rem 1rem 1.125rem;
+  width: 30px;
+  height: 42px;
+  cursor: pointer;
+}
+
+// this gives us the background circle on the video image
+.play-btn:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  display: block;
+  border-radius: 48%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60px;
+  background: var(--bs-primary);
+  height: 60px;
+  cursor: pointer;
+  transition: all 250ms;
+  animation: increase-play-button-circle-area 2300ms ease-in-out infinite;
+}
+
+// this allows the becon effect of the circle area in the center of each video
+@keyframes increase-play-button-circle-area {
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.3);
+    opacity: 0;
+  }
+}
+
+//  this is the play button inside the button circle area
+.play-btn span {
+  position: relative;
+  z-index: 5;
+  top: 8px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 22px solid var(--bs-light);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.video-modal .modal-dialog {
+  max-width: 1024px;
+  margin: 2rem;
+}
+
+// Simple play button
+.play-btn-no-effect:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  display: block;
+  border-radius: 48%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50px;
+  background: var(--bs-primary);
+  height: 50px;
+  cursor: pointer;
+}
+
+.play-btn-no-effect {
+  position: absolute;
+  z-index: 8;
+  display: block;
+  border-radius: 48%;
+  box-sizing: content-box;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 1rem 1.125rem 1rem 1.125rem;
+  width: 30px;
+  height: 42px;
+  cursor: pointer;
+}
+
+// this gives us the background circle on the video image
+.play-btn-no-effect:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  display: block;
+  border-radius: 48%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 60px;
+  background: var(--bs-primary);
+  height: 60px;
+  cursor: pointer;
+}
+
+//  this is the play button inside the button circle area
+.play-btn-no-effect span {
+  position: relative;
+  z-index: 5;
+  top: 8px;
+  left: 7px;
+  width: 0;
+  height: 0;
+  display: block;
+  border-left: 22px solid var(--bs-light);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}

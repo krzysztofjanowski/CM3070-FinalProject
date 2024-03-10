@@ -1,0 +1,71 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <!-- navigation bar section-->
+    {{template "navigation-bar" .}}
+
+    <!-- dummy header section  (to maintain the backgournd image)-->
+
+    <header class="header py-3 pt-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Notification messages section -->
+    <div class="my-6">
+      <div class="container">
+        <div class="row">
+          <col-10 class="offset-1">
+          <h1>Notication messages:</h1>
+          {{range $index, $notification := .Notifications}}
+            <ul class="list-unstyled m-2 lh-lg">
+              <li class="d-flex align-items-center"> 
+                  {{ if . }}
+                    <i class="text-primary fa-solid fa-envelope m-1 fa-2x"> </i>
+                    <i class="text-primary fa-solid fa-comment-sms  m-1 fa-2x"> </i>
+                    <i class="text-primary fa-brands fa-whatsapp  mx-3 fa-2x"> </i>
+                    <p class="my-3">
+                  {{ else }}
+                    <p></p>
+                  {{ end }}
+                {{$notification}}
+              </p>
+              </li>
+            </ul>
+          {{end}}
+          </col-10>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- footer section -->
+
+    <footer class="bg-dark social-media py-6">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center  offset-md-3 text-light">
+            <p>
+              Check more content about Camera Surveillance system on our social
+              media accounts. Contact us if you have any questions.
+            </p>
+            <div
+              class="social-media-icons gap-5 d-flex justify-content-center  p-5"
+            >
+              <i class="fa-brands fa-facebook fa-4x text-light"></i>
+              <i class="fa-brands fa-twitter fa-4x text-light"></i>
+              <i class="fa-brands fa-youtube fa-4x text-light"></i>
+              <i class="fa-solid fa-envelope fa-4x text-light"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+{{end}}
+
+

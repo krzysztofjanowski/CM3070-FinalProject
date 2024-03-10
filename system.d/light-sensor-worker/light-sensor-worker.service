@@ -1,0 +1,13 @@
+[Unit]
+Description=<This is a light-sensor-worker service.>
+
+[Service]
+User=cm3070
+WorkingDirectory=/opt/camera-surveillance-system
+ExecStart=/usr/bin/python3 /opt/camera-surveillance-system/light-sensor-worker/src/main.py
+# optional items below
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

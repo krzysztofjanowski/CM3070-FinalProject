@@ -1,0 +1,161 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <!-- navigation bar section-->
+    <nav
+      class="topNavigationBar fixed-top  navbar navbar-dark p-4 navbar-expand-lg   "
+    >
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            class="rounded-circle"
+            src="/web/images/logo.jpeg"
+            alt="logo of the camera"
+            width="50"
+          />
+        </a>
+        <p class="h2 m-3 fw-bold px-10" style="color: var(--bs-light)">
+          Camera Surveillance System
+        </p>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                href="/starter"
+                class="btn px-4 fw-bold mx-4 border nav-link "
+                >Getting started</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header section -->
+    <!-- Header section -->
+    <header class="header-section header pt-5 pb-7">
+      <div class="camera-div p-4 m-4">
+        <div class="container-l">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="image-container mb-5 px-4">
+                <img
+                src="/web/images/jason-leung-o08u5jVuy00-unsplash.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div
+                class="text-container  text-primary mt-5 px-3 d-flex flex-column mb-5"
+              >
+                <h1 class="display-4 text-primary fw-bold">Login page</h1>
+
+                <form action="login-post" method="POST">
+                  <input name="csrf_token" value="{{.CrossSiteToken}}" type="hidden" >
+                  <div class="form-group mt-4">
+                    <label class="fw-bold m-2 " for="username">Username</label>
+                    <input
+                      type="username"
+                      id="username"
+                      name="fusername"
+                      value=""
+                      autocomplete="off"
+                      class="form-control rounded-5 border-4 border-primary"
+                      placeholder="username"
+                      required
+                    />
+                  </div>
+                  <div class="form-group mt-2">
+                    <label class="m-2 fw-bold" for="email">Password</label>
+                    <input
+                      type="password"
+                      id="password"
+                      name="fpassword"
+                      value=""
+                      autocomplete="off"
+                      class=" border-primary form-control border-2 rounded-5"
+                      placeholder="password"
+                      required
+                    />
+                  </div>
+
+                  <input
+                    type="submit"
+                    class="btn btn-primary m-3 mt-4"
+                    value="log in"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Login section -->
+    <div class="container d-flex justify-content-center"> 
+      <section class="summary-section p-5 m-5">
+        <div class="container-l my-3">
+          <div class="row g-5  hstack ">
+
+
+          </div>
+        </div>
+
+      </section>
+    </div>
+ 
+   
+    <!-- Footer section -->
+    <footer class="social-media py-5 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center offset-md-3 text-light">
+            <p>
+              Check more content about Camera Surveillance system on our social
+              media accounts. Contact us if you have any questions.
+            </p>
+            <div
+              class="social-media-icons gap-5 d-flex p-4 justify-content-center "
+            >
+              <i class="fa-brands fa-facebook fa-4x text-light"></i>
+              <i class="fa-brands fa-twitter fa-4x text-light"></i>
+              <i class="fa-brands fa-youtube fa-4x text-light"></i>
+              <i class="fa-solid fa-envelope fa-4x text-light"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+     <footer class="border-top text-white border-dark pt-6 bg-dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6  text-center justify-content-center offset-md-5">
+            <ul class="nav">
+              <li class="nav-item">
+                <a href="#contact-us" class="fw-bold nav-link link-light">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact-us" class="fw-bold  nav-link link-light">Dashboard</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+{{end}}
+

@@ -1,0 +1,33 @@
+{{define "base"}}
+    <!DOCTYPE html>
+        <html lang="en">
+            <head>
+                <meta charset="utf-8" />
+                <meta
+                name="viewport"
+                content="width=device-width, initial-scale=1, shrink-to-fit=no"
+                />
+
+                <link rel="stylesheet" type="text/css" href="/web/css/fontawesome.css" />
+                <link rel="stylesheet" type="text/css" href="/web/css/bootstrap.css" />
+                <link rel="stylesheet" type="text/css" href="/web/css/custom.css" />
+                <link rel="stylesheet" type="text/css" href="/web/css/styles.css" />
+
+                <title>Camera Surveillance System</title>
+                <style></style>
+            </head>
+            <body style="">
+                {{block "content" .}}
+
+                {{end}}
+                <!-- JavaScript-->
+                    <script src="/web/js/bootstrap.bundle.min.js"></script>
+                    <script src="/web/js/popover.js"></script>
+                    <script src="/web/js/script.js"></script>
+                    {{block "javascript" .}}
+                    
+                    {{end}}
+              </body>
+            </html>
+
+{{end}}

@@ -1,0 +1,6 @@
+/* Custom CSS for hover effect */
+.nav-link:hover {
+  background-color: #94b0ce;
+  color: #fff;
+}
+

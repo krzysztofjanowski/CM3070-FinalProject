@@ -1,0 +1,8 @@
+# Camera Surveillance System
+The final product will be a fully functional indoor home security camera system which will allow us to detect intruders in a room. (*)
+The core of the system will be a movement detection application that will have the following characteristics:
+• Captures and stores video once any kind of motion takes place in the room.
+• Sends an ‘alarm’ message to the phone of a supervisor (an email, for example) describing the problem detected.
+• Uploads the video to a web dashboard, along with meta data describing what is going on (for example, the application can detect if the intruder appears to the right or left of the frame, guess if the intruder is an animal or a person – ‘small’ vs ‘big’ intruder – etc.).
+The system also includes a web dashboard that should let a supervisor see the generated videos, read the video meta data, review the clips, remove the clips, etc.
+The video clips uploaded to the web dashboard will have a maximum length of 20 seconds.

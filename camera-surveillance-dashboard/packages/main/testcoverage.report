@@ -1,0 +1,12 @@
+mode: set
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:27.30,42.39 6 1
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:42.39,50.3 6 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:53.2,54.18 2 1
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:54.18,56.6 1 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:59.2,88.12 12 1
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:91.13,94.18 2 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:94.18,96.3 1 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:98.2,106.28 4 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/main.go:106.28,108.3 1 0
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/middleware.go:16.53,20.2 2 1
+krzysztofjanowski/camera-surveillance-dashboard/packages/main/routes.go:12.49,47.2 18 1

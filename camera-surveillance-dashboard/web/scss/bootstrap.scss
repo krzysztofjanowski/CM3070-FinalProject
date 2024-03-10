@@ -1,0 +1,37 @@
+// Overwrite default bootstrap colours
+// The 4 colours in the pallete are taken from https://colorhunt.co/palette/2d24245c3d2eb85c38e0c097
+$primary: #b85c38;
+$secondary: #5c3d2e;
+// $dark: #2d2424;
+$light: #e0c097;
+$dark: black;
+
+$font-family-sans-serif: "Open Sans", sans-serif;
+
+$btn-border-radius: 40px;
+$btn-border-radius-sm: 40px;
+$btn-border-radius-lg: 40px;
+
+$nav-link-color: red;
+$navbar-dark-color: $primary;
+$navbar-toggler-border-radius: 5px;
+
+// create a bigger spacer
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 9,
+  8: $spacer * 12,
+  9: $spacer * 16,
+
+) !default;
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

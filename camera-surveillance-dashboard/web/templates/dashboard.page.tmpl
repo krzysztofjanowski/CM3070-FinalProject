@@ -1,0 +1,286 @@
+{{template "base" .}}
+
+  {{define "content"}}
+      <!-- Navigation bar section-->
+      
+      {{template "navigation-bar" .}}
+
+      <header class="header pb-1 pt-7">
+        <div class="camera-div p-6 m-5">
+          <div class="container-l">
+            <div class="row">
+              <div
+                class="col-6 d-flex flex-column mt-5 offset-md-4 align-items-center"
+              >
+                <div class="position-relative">
+                  <img
+                    src="/web/images/jason-leung-o08u5jVuy00-unsplash.jpg"
+                    alt="An image of a camera which allows to watch the latest video"
+                    class="img-fluid rounded-circle"
+                  />
+                  <a
+                    href=""
+                    class="videos-btn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#video-modal"
+                    data-bs-src="/web/ready_videos/{{.LatestVideo}}"
+                  >
+                    <span class="play-btn">
+                      <!-- this is for the triangle -->
+                      <span></span>
+                    </span>
+                  </a>
+                  <div class="row mt-3 px-3">
+                    <div class="col-12 d-flex flex-column align-items-center">
+                      <h5 class="fw-bold text-white">
+                        Watch the latest video here
+                      </h5>
+                    </div>
+                  </div>
+                  <!-- Modal of the video -->
+                  <div class="videos-modal">
+                    <div id="video-modal" class="modal fade">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header bg-light">
+                            <h5 class="modal-title">
+                              {{.LatestVideo}}
+                            </h5>
+                            <i
+                              class="fa-solid fa-xmark fa-1x"
+                              data-bs-dismiss="modal"
+                            ></i>
+                          </div>
+                          <div class="ratio ratio-16x9">
+                            <iframe
+                              id="iframe1"
+                              src="/web/ready_videos/{{.LatestVideo}}"
+                              frameborder="0"
+                              class="embed-responsive-item"
+                            ></iframe>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- readings section -->
+      <section class="readings-section mt-7" id="readings">
+        <div class="container">
+          <h2 class="fw-bold text-center">Sensors' readings</h2>
+          <div class="row offset-md-3 mt-5">
+
+            <div class="col-md-2 m-4">
+              <div class="shadow-lg text-center card bg-light rounded-3 border-0">
+                <div class="card-body">
+                  <a href="" style="text-decoration: none">
+                    <h1
+                      class="card-title text-black fw-bold"
+                    >
+                    {{.MovementSensor1}}
+                    </h1>
+                    <p class="text-black px-3">
+                      <i class="fa-solid fa-person-running fa-2x"></i> Movement detection sensor 1
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-2 m-5">
+              <div class=" text-center shadow-lg card bg-light rounded-3 mt-4 border-0">
+                <div class="card-body">
+                  <a href="" style="text-decoration: none">
+                    <h1
+                      class="reading card-title fw-bold text-black"
+                      data-target="{{.LightSensor}}"
+                    >
+                    {{.LightSensor}}
+                    </h1>
+                    <p class="text-black px-3">
+                      Light Intensity
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-2 m-5">
+              <div class=" text-center shadow-lg card bg-light rounded-3 mt-4 border-0">
+                <div class="card-body">
+                  <a href="" style="text-decoration: none">
+                    <h1
+                      class="card-title fw-bold text-black"
+                    >
+                    {{.MovementSensor2}}
+                    </h1>
+                    <p class="text-black px-3">
+                      <i class="fa-solid fa-person-running fa-2x"></i>  Movement detection sensor 2
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Search section -->
+      <section class="search-section mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="rounded-5 shadow offset-2 col-8">
+              <h2 class="fw-bold text-center mt-4">
+                Search for videos from specified dates
+              </h2>
+              <div class="">
+                <form action="dashboard-post" method="POST">
+                  <input name="csrf_token" value="{{.CrossSiteToken}}" type="hidden" >
+                  <div class="d-flex flex-row justify-content-around">
+                    <div class="col-md-4 my-5">
+                      <label
+                        for="from-date"
+                        class="rounded-5 border-primary border-3"
+                        >From</label
+                      >
+                      <input required
+                        type="date"
+                        id="from-date"
+                        class="form-control border-primary rounded-4"
+                        name="ffromDate"
+                        placeholder="DD-MM-YY"
+                      />
+                    </div>
+
+                    <div class="col-md-4 my-4">
+                      <label
+                        for="to-date"
+                        class="rounded-4 border-primary border-3"
+                        >To</label
+                      >
+                      <input required
+                        type="date"
+                        id="to-date"
+                        class="form-control border-primary rounded-4 "
+                        name="ftoDate"
+                        placeholder="DD-MM-YY"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row-reverse">
+                    <div class="px-4">
+                      <button
+                        class="btn btn-primary border my-3 align-self-start fw-bold px-6 text-white"
+                      >
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <strong>Search</strong>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      <!-- Videos section -->
+      <section class="video mb-6">
+        <div class="container">
+          <div class="row">
+            {{range $index, $name := .VideosSlice}}
+
+                <!-- {{$index}} video -->
+                <div class="col-4 mt-3 d-flex flex-column align-items-center mb-4">
+                  <div class="position-relative">
+                    <video width="320" height="240" controls="controls" class="mt-5">
+                      <source src="/web/ready_videos/{{$name}}" type="video/mp4" />
+                    </video>
+                    <a
+                      href=""
+                      class="videos-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#video-modal{{$index}}"
+                      data-bs-src="/web/ready_videos/{{$name}}"
+                    >
+                      <span class="play-btn-no-effect">
+                        <!-- this is for the triangle -->
+                        <span></span>
+                      </span>
+                    </a>
+                    <a href="/web/ready_videos/{{$name}}" download="{{$name}}" style="text-decoration:none">
+                      <button class="btn btn-primary text-white m-3 align-self-start" type="button">Download Video</button>
+                      
+                    </a>
+
+                    <div class="row px-4 mt-2">
+                      <div class="col-12 d-flex flex-column align-items-center">
+                        <h5 class="fw-bold">{{$name}}</h5>
+                      </div>
+                    </div>
+                    <!-- Modal of the video -->
+                    <div class="videos-modal">
+                      <div id="video-modal{{$index}}" class="modal fade">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title">{{$name}}</h5>
+                            </div>
+                            <div class="ratio ratio-16x9">
+                              <iframe
+                                id="iframe1"
+                                src="/web/ready_videos/{{$name}}"
+                                frameborder="0"
+                                class="embed-responsive-item"
+                              ></iframe>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+  
+      
+            {{end}}
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Footer section -->
+
+      <footer class="social-media py-6 bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-light offset-md-3">
+              <p>
+                CM3070 Final Project: Camera Surveillance system.
+              </p>
+              <div
+                class="social-media-icons d-flex justify-content-center gap-5 p-4"
+              >
+                <i class="fa-brands fa-facebook fa-4x text-light"></i>
+                <i class="fa-brands fa-twitter fa-4x text-light"></i>
+                <i class="fa-brands fa-youtube fa-4x text-light"></i>
+                <i class="fa-solid fa-envelope fa-4x text-light"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+{{end}}

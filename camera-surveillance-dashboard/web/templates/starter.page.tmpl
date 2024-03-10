@@ -1,0 +1,747 @@
+{{template "base" .}}
+
+{{define "content"}}
+    <!-- navigation bar section-->
+    <nav
+      class="topNavigationBar fixed-top navbar navbar-dark p-4 navbar-expand-lg "
+    >
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img
+            class="rounded-circle"
+            src="/web/images/logo.jpeg"
+            alt="logo of the camera"
+            width="50"
+          />
+        </a>
+        <p class=" m-4 h2 fw-bold px-9" style="color: var(--bs-light)">
+          Camera Surveillance System
+        </p>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarDropdown"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarDropdown">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                href="#account-setup"
+                class="nav-link  px-2 mx-4 btn  fw-bold"
+                >Getting started</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="login"
+                class="nav-link px-2 mx-4 btn  fw-bold"
+                >Log in</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header section -->
+    <header class="header-section header pt-4 pb-7">
+      <div class="camera-div m-6 p-2 ">
+        <div class="container-l">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="image-container mb-4 px-3">
+                <img
+                  src="/web/images/jason-leung-o08u5jVuy00-unsplash.jpg"
+                  alt=""
+                  class="img-fluid rounded-circle"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div
+                class="text-container text-primary mb-4 px3 d-flex  justfy-content-center flex-column h-120  mt-5 "
+              >
+                <h1 class="display-4 text-primary fw-bold ">  
+                  Welcome to Camera Surveillance System.</h1>
+
+                  <ul class="list-group list-group-flush" style="list-style-type: none">
+                    <li class="my-2 text-primary">
+                      <i
+                        class="fa-2x d-inline fa-solid fa-chevron-right"
+                      ></i>
+                      <strong> Enhance the security of your home.</strong>
+                    </li>
+                    <li class="text-primary my-3">
+                      <i class="fa-2x fa-solid fa-chevron-right "></i>
+                      <strong>Discourage potential burlers.</strong>
+                    </li>
+                    <li class="text-primary my-3">
+                      <i class="fa-2x fa-solid fa-chevron-right "></i>
+                      <strong> Protect your valuables.</strong>
+                    </li>
+    
+                    <li class="text-primary my-3">
+                      <i class="fa-2x fa-solid fa-chevron-right "></i>
+                      <strong>Allows extension with more cameras and sensors.</strong>
+                    </li>
+                  </ul>
+
+                  <p class="lead p-4 mt-3 ">
+                    "<i>Dashboard is where we should feel secure and comfortable.</i
+                    >" - Catherine Pulsifer.
+                  </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Summary section -->
+    <div class="container d-flex justify-content-center"> 
+
+    <section class="summary-section m-6 p-4">
+       <div class="container-l my-3">
+        <div class="row g-5  hstack ">
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="text-light fa-solid fa-video fa-4x "></i>
+            <div>
+              <h5 class="fw-bold">Mulitple cameras</h5>
+              <p class="text-muted">
+                You can use multiple cameras for the same area
+              </p>
+            </div>
+          </div> 
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-user-secret fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Multi-sensor</h5>
+              <p class="text-muted">
+                You can place multiple sensors for better area coverage
+              </p>
+            </div>
+          </div>
+
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-hard-drive fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Low storage required</h5>
+              <p class="text-muted">
+                The solution requires low storage
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-hand-holding-dollar fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Inexpensive</h5>
+              <p class="text-muted">
+                The system runs on IOT inexpensive device
+              </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="container-l my-5">
+        <div class="row hstack g-5">
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-comment-sms fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">SMS notifications</h5>
+              <p class="text-muted">
+                You can be notified by SMS  
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-envelope-circle-check fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Email notifications</h5>
+              <p class="text-muted">
+                You can be notified by E-mail.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6  gap-4 d-flex ">
+  
+            <i class="fa-brands fa-slack fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Slack notifications</h5>
+              <p class="text-muted">
+                You can be notified by Slack App on your mobile, or computer.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-pager fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">User-friendly dashboard</h5>
+              <p class="text-muted">
+                You can manage your camera surveillance system from user
+                friendly dashboard
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-l my-5">
+        <div class="row hstack g-5">
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-house-lock fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Compelete privacy</h5>
+              <p class="text-muted">
+                Never store any of your video recordings or any meta data in the
+                cloud
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6  gap-4 d-flex ">
+            <i class="fa-solid fa-person-running fa-4x text-light"></i>
+            <div>
+              <h5 class="fw-bold">Motion detection</h5>
+              <p class="text-muted">
+                The system can detect and highlight motion within the video
+              </p>
+            </div>
+          </div>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- Mission statement section -->
+
+    <section class="satement-section mb-7">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="shadow p-4 rounded-4 bg-light ">
+              <h1 class="text-center">Modern camera system for indoor surveillance</h1>
+              <p>
+                It detects motion in the monitored area, records it and
+                intelligently processes the video to highlight areas where
+                movement occured. It is a multi sensor with capability to allow
+                for further expansion with additional sensors and components. It
+                can detect and track motion in the recorded videos and notify
+                the owner of such occurrences via SMS, Slack and E-mail messages. It
+                gives you full privacy. No data or video is every stored in the
+                cloud or shared with any 3rd parties unless you choose to do so.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main features section -->
+    <section class="mb-6 features-section ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="image-container">
+              <img
+                src="/web/images/ross-sneddon-0MBt0sGU8UA-unsplash.jpg"
+                alt=""
+                class="mt-3 img-fluid "
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="mx-3 d-flex justify-content-center flex-column ">
+              <h3 class="display-5 fw-bold">Improve your home safety</h3>
+              <p>
+                Protect your home with modern camera surveillance system that
+                can detect any movement and notify you instantly.
+              </p>
+              <ul class="list-group list-group-flush ">
+                <li class="list-group-item">
+                  <i
+                    class="text-primary d-inline fa-solid fa-chevron-right fa-1x"
+                  ></i>
+                  No monthly subscription fees.
+                </li>
+                <li class="list-group-item">
+                  <i class="text-primary fa-solid fa-chevron-right fa-1x"></i>
+                  It highlights areas where movement has occured.
+                </li>
+                <li class="list-group-item">
+                  <i class="text-primary fa-solid fa-chevron-right fa-1x"></i>
+                  It records only when necessary.
+                </li>
+
+                <li class="list-group-item">
+                  <i class="text-primary fa-solid fa-chevron-right fa-1x"></i>
+                  Allows extension with more cameras and sensors.
+                </li>
+              </ul>
+              <a
+                href=""
+                class="mt-4 btn align-self-start btn-primary text-white "
+                data-bs-toggle="modal"
+                data-bs-target="#modalVideoSample"
+                >Watch a sample video</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal video sample section -->
+    <section id="modalVideoSample" class="modal fade">
+      <div class="modal-lg modal-dialog mt-4">
+        <div class="p-4 modal-content ">
+          <div class="modal-header">
+            <h3 class="text-right fw-bold modal-title   ">Camera technical specs </h5>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <ul class="lh-lg list-group list-group-flush">
+              <li class="list-group-item ">
+                <i class="text-light fa-regular fa-circle fa-1x "></i>
+                Back-illuminated 12-megapixel Sony IMX708 image sensor
+              </li>
+              <li class="list-group-item">
+                <i class="text-light fa-regular fa-circle fa-1x "></i>
+                High signal-to-noise ratio (SNR) 
+              </li>
+              <li class="list-group-item">
+                <i class="text-light fa-regular fa-circle fa-1x "></i>
+                Built-in 2D Dynamic Defect Pixel Correction (DPC)
+              </li>
+              <li class="list-group-item">
+                <i class="text-light fa-regular fa-circle fa-1x "></i>
+                Rapid autofocus 
+              </li>
+              <li class="list-group-item">
+                <i class="text-light fa-regular fa-circle fa-1x "></i>
+                Wide diagonal field of view:  120 degrees  
+              </li>
+              <li class="list-group-item">
+                <i class="fa-regular fa-circle fa-1x text-light"></i>
+                11.9 megapixels resolution 
+              </li>
+            </ul>
+
+            <div class="container">
+              <a href="" class="btn btn-primary text-white">Let's get started</a>
+              <button class="btn btn-primary" data-bs-dismiss="modal">
+                Close
+              </button>
+            </div>
+            </div>
+            <div class="col-md-6">
+
+              <video width="320" height="240" controls>
+                <source src="/web/demo_videos/demo_video1.mp4" type="video/mp4">
+              </video>
+
+              <video width="320" height="240" controls>
+                <source src="/web/demo_videos/demo_video2.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Unique features section -->
+    <section class="unique_features my-6">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <img
+            src="/web/images/madison-oren-8iN-YTPHAEw-unsplash.jpg"
+            alt=""
+            class="rounded-4 img-fluid m-4"
+          />
+          <p class="fw-bold">Autofocus</p>
+          <p class="lead px-6">
+            Auto focus allows on quick and accurate focus within the area that is being recorded
+            to avoid blurry videos.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="/web/images/viktor-forgacs-7D_Jvhba3cQ-unsplash.jpg"
+            alt=""
+            class="rounded-4 img-fluid m-4"
+          />
+          <p class="fw-bold">120 degrees angle view</p>
+          <p class="lead px-6">
+            The width of the view field is an important factor to consider as it
+            helps to mimize so called blind spots ie places which are not
+            covered by the camera.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <img
+            src="/web/images/jez-timms-HauxSOFvh6k-unsplash.jpg"
+            alt=""
+            class="rounded-4 img-fluid m-4"
+          />
+          <p class="fw-bold">Adaptable light performance</p>
+          <p class="lead px-6">
+            The light sensor detects low light conditions and attempts to adapt the
+            video accordingly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- carousel section -->
+    <section class="carousel-section my-6">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 text-container">
+            <h3 class="display-3 m-4">
+              Check sample images
+            </h3>
+            <p class="lead w-50 m-auto mb-5">
+              Once any movement in the monitored area has been detected, the
+              system will attempt to underline areas where the movement occured.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div
+              id="slider"
+              class="carousel slide carousel-dark"
+              data-bs-ride="carousel"
+            >
+              <!-- carousel items -->
+              <div class="carousel-indicators">
+                <button
+                  class="active"
+                  type="button"
+                  data-bs-slide-to="0"
+                  data-bs-target="#slider"
+                  aria-current="true"
+                  aria-label="Slide_1"
+                ></button>
+                <button
+                  class=""
+                  type="button"
+                  data-bs-slide-to="1"
+                  data-bs-target="#slider"
+                  aria-current="false"
+                  aria-label="Slide_2"
+                ></button>
+                <button
+                  class=""
+                  type="button"
+                  data-bs-slide-to="2"
+                  data-bs-target="#slider"
+                  aria-current="false"
+                  aria-label="Slide_3"
+                ></button>
+              </div>
+
+              <div class="carousel-inner rounded-4">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="d-block rounded-4"
+                      src="/web/images/carousel_pic1.png"
+                      alt="First slide"
+                      style="max-width: 50%; min-width: 50%"
+                    />
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="d-block rounded-4"
+                      src="/web/images/carousel_pic2.png"
+                      alt="Second slide"
+                      style="max-width: 50%; min-width: 50%"
+                    />>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <img
+                      class="d-block rounded-4"
+                      src="/web/images/carousel_pic3.png"
+                      alt="Third slide"
+                      style="max-width: 50%; min-width: 50%"
+                    />>
+                  </div>
+                </div>
+              </div>
+
+              <!-- carousel next and previous buttons -->
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-slide="prev"
+                data-bs-target="#slider"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-slide="next"
+                data-bs-target="#slider"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Getting-started section -->
+    <section class="overview-of-getting-started-section my-7">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-12 text-container">
+            <h3 class="display-3 m-4">Getting started overview</h3>
+            <p class="lead w-50 m-auto mb-5">
+              Here is a quick setup overview that you will need to do to get the
+              system up and running.
+            </p>
+          </div>
+        </div>
+        <!-- getting started points -->
+        <div class="row">
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4"> 1 </span>
+              </div>
+              <div class="explanation-text">
+                <h3 class="fs-4">Hardware setup</h3>
+                <p>
+                  Choose an area in your house that you would like to monitor
+                  and connect devices to the power
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4">2</span>
+              </div>
+              <div>
+                <h3 class="fs-4">Camera and sensors positioning</h3>
+                <p>
+                  Make sure that camera and sensors are positioned correctly
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4">3</span>
+              </div>
+              <div>
+                <h3 class="fs-4">Fill in Getting-started section</h3>
+                <p>
+                  The system requires a few details from you before you can
+                  start using it. Scroll to Getting-started section.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4">4</span>
+              </div>
+              <div>
+                <h3 class="fs-4">Record your first video</h3>
+                <p>
+                  Once you have logged in to the main dashboard, move around the
+                  sensors which will trigger video recording. Once video has
+                  finished, wait for it to appear in the dashboard.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4">5</span>
+              </div>
+              <div>
+                <h3 class="fs-4">Watch your video</h3>
+                <p>
+                  You can access your videos from the home page or dashboard
+                  page where you can filter for specific dates.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 my-3">
+            <div class="d-flex gap-2">
+              <div class="number-point">
+                <span class="bg-primary py-1 px-3 fs-3 rounded-4">6</span>
+              </div>
+              <div>
+                <h3 class="fs-4">Check notifications</h3>
+                <p>
+                  You should receive notifications to your Email, Slack and SMS.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- this is a bit of hack so that the button scrolls to the right position -->
+      <div  id="account-setup"></div>
+    </section>
+
+    <!-- getting started form section -->
+    <section class="overflow-hidden my-7">
+      <div class="container">
+        <div class="row shadow bg-light p-4 rounded-4 mb-6">
+          <div class="col-md-6">
+            <h3 class="text-center">Getting started</h3>
+            <p>
+              To start using your camera surveillance system, you
+              need to provide following details:
+            </p>
+            <ul class="list-unstyled vstack gap-2">
+              <li>
+                <i
+                  class="d-inline fa-solid fa-chevron-right fa-1x text-primary"
+                ></i>
+                <strong>Your name or nickname</strong> which is going to be used
+                in notifications messages.
+              </li>
+              <li>
+                <i
+                  class="d-inline fa-solid fa-chevron-right fa-1x text-primary"
+                ></i>
+                <strong>Your email address </strong> which is going to be used
+                for email notifications.
+              </li>
+              <li>
+                <i
+                  class="d-inline fa-solid fa-chevron-right fa-1x text-primary"
+                ></i>
+                <strong>Your phone number </strong> which is going to be used
+                for SMS notifications.
+              </li>
+              <li>
+                <i
+                  class="d-inline fa-solid fa-chevron-right fa-1x text-primary"
+                ></i>
+                <strong>Your Slack API id </strong> which is going to be used
+                for Slack notifications.
+              </li>
+            </ul>
+          </div>
+          <!-- setup form -->
+          <div class="col-md-6 p-4">
+            <form action="registration-post" method="POST">
+              <input name="csrf_token" value="{{.CrossSiteToken}}" type="hidden" >
+              <div class="my-4">
+                  <input
+                    type="text"
+                    name="fusername"
+                    class="border-3 form-control rounded-5 border-primary"
+                    placeholder="Your username"
+                  />
+                  <div class="my-4">
+                    <input
+                      type="password"
+                      name="fpassword"
+                      class="border-3 form-control rounded-5 border-primary"
+                      placeholder="Your password"
+                    />
+                  </div>
+              </div>
+              <div class="my-4">
+                  <input
+                    type="email"
+                    name="femail"
+                    class="border-3 form-control rounded-5 border-primary"
+                    placeholder="Your email address"
+                  />
+              </div>
+              <div class="my-4">
+                <input
+                    type="tel"
+                    name="fphone"
+                    class="border-3 form-control rounded-5 border-primary"
+                    placeholder="Your phone number"
+                  />
+              </div>
+              <div class="my-4">
+                <input
+                    type="text"
+                    name="fslackKey"
+                    class="border-3 form-control rounded-5 border-primary"
+                    placeholder="Your Slack API id"
+                  />
+              </div>
+              <div class="d-grid m-4">
+                <button type="submit" class="btn text-black btn-outline-primary">
+                  Let's get started
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="social-media bg-dark py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3 text-center text-light">
+            <p>
+              Check more content about Camera Surveillance system on our social
+              media accounts. Contact us if you have any questions.
+            </p>
+            <div
+              class="social-media-icons d-flex justify-content-center gap-5 p-4"
+            >
+              <i class="fa-brands fa-facebook fa-4x text-light"></i>
+              <i class="fa-brands fa-twitter fa-4x text-light"></i>
+              <i class="fa-brands fa-youtube fa-4x text-light"></i>
+              <i class="fa-solid fa-envelope fa-4x text-light"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+{{end}}
+

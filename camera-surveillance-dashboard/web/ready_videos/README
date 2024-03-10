@@ -1,0 +1,2 @@
+# The "ready_videos" directory contains a few sample videos which are used only for local development purposes. 
+# When deployed to an actual node, the read_videos directory would be empty and populated by the image-processing-worker with actual videos 

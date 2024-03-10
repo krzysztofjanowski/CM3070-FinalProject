@@ -1,0 +1,51 @@
+{{define "navigation-bar"}}
+<nav
+class="topNavigationBar fixed-top  navbar navbar-dark p-4 mb-6 navbar-expand-lg"
+>
+<div class="container">
+  <a href="index.html" class="navbar-brand">
+    <img
+      class="rounded-circle"
+      src="/web/images/logo.jpeg"
+      alt="logo of the camera"
+      width="50"
+    />
+  </a>
+  <p class="fw-bold px-10 h4 m-3 " style="color: var(--bs-light)">
+    Camera Surveillance Dashboard
+  </p>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarDropdown"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarDropdown">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item px-2 ">
+        <a href="dashboard" class="nav-link fw-bold">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a href="notifications" class="nav-link fw-bold"
+          >Notifications</a
+        >
+      </li>
+      <li class="nav-item">
+        <button type="button" onClick="parent.location='privacy-on'" class="nav-link btn px-3 mx-3 fw-bold"> Off </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" onClick="parent.location='privacy-off'" class="nav-link btn px-3 mx-3 fw-bold"> On </button>
+      </li>
+      <li class="nav-item">
+        <button type="button" onClick="parent.location='record-now'" class="nav-link btn px-3 fw-bold"> Record Video now </button>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+
+{{end}}

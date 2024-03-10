@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+ 
+    <link rel="stylesheet" type="text/css" href="/web/css/fontawesome.css" />
+    <link rel="stylesheet" type="text/css" href="/web/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="/web/css/custom.css" />
+    <link rel="stylesheet" type="text/css" href="/web/css/styles.css" />
+
+</head>
+<body>
+    <h1>
+        This is an about page used for development purposes to test interactions and golang templating 
+    </h1>
+    <p>
+        This is first paragraph!!!
+        This came from template: {{index .StringMap "test"}}
+    </p>
+    <div class="col-md-6 p-4">
+        <form method="POST" action="login123">
+            <input type="tel" name="fphoneNumber" placeholder="Your phone number please" class="form-control border-primary rounded-5 border-3">
+            <input type="submit" value="Save your number">
+        </form>
+    </div >
+</body>
+</html>
